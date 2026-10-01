@@ -1,57 +1,66 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <meta name="google-site-verification" content="L3RvXAA4Mf16BUCPhk_Ff9X7I6BgjQK8CVrcfJr__tY">
+<html lang="en">
 
-    <title>Sanjeevini Ambulance Service in Udupi | ICU ventilator ambulance 24/7</title>
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="google-site-verification"
+        content="L3RvXAA4Mf16BUCPhk_Ff9X7I6BgjQK8CVrcfJr__tY">
+
+    <title>Sanjeevini Ambulance Service in Udupi | ICU Ventilator Ambulance 24/7</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="robots" content="index, follow">
 
-    <meta name="description" content="Sanjeevini Ambulance Service Udupi 24/7. ICU ventilator ambulance with doctor and technician. Call now.">
+    <meta name="description"
+        content="Sanjeevini Ambulance Service provides 24/7 ambulance services in Udupi, Manipal, Mangalore, Brahmavara, Kundapura, Karkala, Kaup, Malpe and Ambalpady. ICU ventilator ambulance with doctor and technician. Call 9845224816.">
 
-    <meta name="keywords" content="ambulance Udupi, ICU ambulance Udupi, ventilator ambulance, emergency ambulance Manipal Mangalore">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-
-    <!-- SEO -->
-    <meta name="description" content="Sanjeevini Ambulance Service Udupi 24/7. ICU ventilator ambulance with doctor and technician. Call 9845224816">
-    <meta name="keywords" content="ambulance Udupi, ICU ambulance Udupi,ambulance near me,ambulance in malpe, ambulance in ambalpady, ambulance in brahmavara, ventilator ambulance, emergency ambulance Manipal Mangalore">
+    <meta name="keywords"
+        content="ambulance Udupi, ambulance near me, ambulance in Udupi, ICU ambulance Udupi, ventilator ambulance Udupi, ambulance Manipal, ambulance Mangalore, ambulance Malpe, ambulance Ambalpady, ambulance Brahmavara, ambulance Kundapura, ambulance Karkala, ambulance Kaup">
 
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            font-family: Arial;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
         }
 
         /* HERO */
         .hero {
             background: url('ambulance.jpg') center/cover no-repeat;
-            height: 90vh;
+            min-height: 90vh;
             color: white;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding: 20px;
         }
 
         .hero h1 {
             font-size: 40px;
-            background: rgba(0,0,0,0.6);
-            padding: 10px;
+            background: rgba(0, 0, 0, 0.65);
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px;
         }
 
         .hero p {
             font-size: 18px;
-            background: rgba(0,0,0,0.6);
-            padding: 8px;
+            background: rgba(0, 0, 0, 0.65);
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin: 5px;
         }
 
         .call-btn {
@@ -62,21 +71,39 @@
             margin-top: 15px;
             border-radius: 5px;
             text-decoration: none;
+            display: inline-block;
         }
 
-        /* SERVICES */
+        .call-btn:hover {
+            background: darkred;
+        }
+
+        /* SECTIONS */
         .services {
-            padding: 40px;
+            padding: 40px 20px;
             text-align: center;
         }
 
+        .services h2 {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        /* SERVICE BOXES */
         .box {
             border: 1px solid #ddd;
             padding: 20px;
             margin: 10px;
             display: inline-block;
             width: 250px;
+            min-height: 150px;
+            vertical-align: top;
             border-radius: 10px;
+            background: #fff;
+        }
+
+        .box h3 {
+            margin-top: 0;
         }
 
         /* VIDEO */
@@ -84,138 +111,351 @@
             max-width: 100%;
         }
 
-        /* FLOAT BUTTONS */
-        .whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            color: white;
-            padding: 15px;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 24px;
-        }
-
+        /* FLOATING CALL BUTTON */
         .call {
             position: fixed;
             bottom: 90px;
             right: 20px;
             background: red;
             color: white;
-            padding: 15px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             text-decoration: none;
             font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
         }
 
+        /* FLOATING WHATSAPP BUTTON */
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        /* MAP */
+        .map-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+        }
+
+        /* FOOTER */
         footer {
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             background: #111;
             color: white;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .services {
+                padding: 30px 10px;
+            }
+
+            .services h2 {
+                font-size: 25px;
+            }
+
+            .box {
+                width: 90%;
+                max-width: 320px;
+            }
+
+            .call,
+            .whatsapp {
+                width: 55px;
+                height: 55px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>Sanjeevini Ambulance Service</h1>
-    <p>24/7 Emergency Ambulance | Udupi | Manipal | Mangalore | Brahmavara | Kundapura | Hiriyadka | Karkala</p>
-    <p>Since 1997</p>
-    <a href="tel:9845224816" class="call-btn">
-        <i class="fa-solid fa-phone"></i> Call Now
+    <!-- HERO -->
+    <div class="hero">
+
+        <h1>Sanjeevini Ambulance Service</h1>
+
+        <p>
+            24/7 Emergency Ambulance |
+            Udupi |
+            Manipal |
+            Mangalore |
+            Brahmavara |
+            Kundapura |
+            Hiriyadka |
+            Karkala |
+            Kaup |
+            Malpe |
+            Ambalpady
+        </p>
+
+        <p>Since 1997</p>
+
+        <a href="tel:9845224816" class="call-btn">
+            <i class="fa-solid fa-phone"></i>
+            Call Now
+        </a>
+
+    </div>
+
+
+    <!-- SERVICES -->
+    <div class="services">
+
+        <h2>Our Services</h2>
+
+        <div class="box">
+            <h3>ICU Ambulance</h3>
+            <p>
+                Advanced ambulance with ventilator support
+                for critical patients.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>Advanced Life Support</h3>
+            <p>
+                Ambulance service with trained technician
+                and doctor for critical patients.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>Basic Ambulance</h3>
+            <p>
+                Ambulance service for normal patient
+                transportation.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>Omni / TT / Winger / Eeco</h3>
+            <p>
+                Comfortable ambulance service for
+                long-distance patient transportation.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>Funeral Undertakers</h3>
+            <p>
+                Complete funeral support services
+                with dignity and care.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- AREAS WE SERVE -->
+    <div class="services">
+
+        <h2>📍 Areas We Serve</h2>
+
+        <div class="box">
+            <h3>Udupi</h3>
+            <p>24/7 Ambulance Service</p>
+        </div>
+
+        <div class="box">
+            <h3>Manipal</h3>
+            <p>24/7 Ambulance Service</p>
+        </div>
+
+        <div class="box">
+            <h3>Mangalore</h3>
+            <p>24/7 Ambulance Service</p>
+        </div>
+
+        <div class="box">
+            <h3>Brahmavara</h3>
+            <p>24/7 Ambulance Service</p>
+        </div>
+
+        <div class="box">
+            <h3>Kundapura</h3>
+            <p>24/7 Ambulance Service</p>
+        </div>
+
+        <div class="box">
+            <h3>Hiriyadka</h3>
+            <p>24/7 Ambulance Service</p>
+        </div>
+
+        <div class="box">
+            <h3>Karkala</h3>
+            <p>24/7 Ambulance Service</p>
+        </div>
+
+        <div class="box">
+            <h3>Kaup</h3>
+            <p>24/7 Ambulance Service</p>
+        </div>
+
+        <div class="box">
+            <h3>Malpe</h3>
+            <p>24/7 Ambulance Service</p>
+        </div>
+
+        <div class="box">
+            <h3>Ambalpady</h3>
+            <p>24/7 Ambulance Service</p>
+        </div>
+
+    </div>
+
+
+    <!-- CONTACT -->
+    <div class="services">
+
+        <h2>Contact</h2>
+
+        <p>
+            📞 <strong>9845224816</strong>
+        </p>
+
+        <p>
+            📍 Udupi | Manipal | Mangalore | Brahmavara |
+            Kundapura | Hiriyadka | Karkala | Kaup |
+            Malpe | Ambalpady
+        </p>
+
+        <p>
+            ⏰ <strong>24/7 Available</strong>
+        </p>
+
+    </div>
+
+
+    <!-- FLOATING CALL BUTTON -->
+    <a href="tel:9845224816"
+        class="call"
+        aria-label="Call Sanjeevini Ambulance Service">
+
+        <i class="fa-solid fa-phone"></i>
+
     </a>
-</div>
 
 
-<!-- SERVICES -->
-<div class="services">
-    <h2>Our Services</h2>
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/919845224816"
+        class="whatsapp"
+        aria-label="WhatsApp Sanjeevini Ambulance Service"
+        target="_blank">
 
-    <div class="box">
-        <h3>ICU Ambulance</h3>
-        <p>Advanced ambulance with ventilator support</p>
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+    <!-- VIDEO SECTION -->
+    <div class="services">
+
+        <h2>Our Ambulance Service</h2>
+
+        <div style="text-align:center;">
+
+            <video
+                style="width:100%; max-width:400px; height:auto; border-radius:10px;"
+                controls>
+
+                <source
+                    src="ambulance-video.mp4.mp4"
+                    type="video/mp4">
+
+                Your browser does not support the video tag.
+
+            </video>
+
+        </div>
+
     </div>
 
-    <div class="box">
-        <h3>Advanced Life Support</h3>
-        <p>With trained technician and doctor for critical patients.</p>
+
+    <!-- GOOGLE MAP -->
+    <div class="services">
+
+        <h2>Our Location</h2>
+
+        <div class="map-container">
+
+            <iframe
+                src="https://www.google.com/maps?q=Udupi,Karnataka,India&output=embed"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+
+        </div>
+
     </div>
 
-    <div class="box">
-        <h3>Basic Ambulance</h3>
-        <p>For normal patient transport.</p>
+
+    <!-- WHY CHOOSE US -->
+    <div class="services">
+
+        <h2>Why Choose Us?</h2>
+
+        <p>✔ 24/7 Emergency Service</p>
+
+        <p>✔ ICU Ventilator Ambulance</p>
+
+        <p>✔ Experienced Doctor & Technician</p>
+
+        <p>✔ Funeral Undertakers</p>
+
+        <p>
+            ✔ Fast Response in Udupi, Manipal, Mangalore,
+            Brahmavara, Kundapura, Hiriyadka, Karkala,
+            Kaup, Malpe and Ambalpady
+        </p>
+
     </div>
 
-    <div class="box">
-        <h3>Omni / TT / Winger / Eeco</h3>
-        <p>Comfortable long-distance ambulance service.</p>
-    </div>
 
-    <div class="box">
-        <h3>Funeral Undertakers</h3>
-        <p>Complete funeral support services with dignity and care.</p>
-    </div>
+    <!-- FOOTER -->
+    <footer>
 
-</div>
+        © 2026 Sanjeevini Ambulance Service.
+        All Rights Reserved.
 
-<!-- CONTACT -->
-<div class="services">
-    <h2>Contact</h2>
-    <p>📞 9845224816</p>
-    <p>📍 Udupi | Manglore | Manipal | Brahmavara | Kundapura | Karkala | Kaup  </p>
-    <p>⏰ 24/7 Available</p>
-</div>
-
-<!-- FLOAT BUTTONS -->
-<a href="tel:9845224816" class="call">
-    <i class="fa-solid fa-phone"></i>
-</a>
-
-<a href="https://wa.me/919845224816" class="whatsapp">
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
- <!-- VIDEO SECTION -->
-<div class="services">
-    <h2>Our Ambulance Service</h2>
-
-    <div style="text-align:center;">
-        <video style="width:100%; max-width:400px; height:auto; border-radius:10px;" controls>
-            <source src="ambulance-video.mp4.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-</div>
-<!-- GOOGLE MAP -->
-<div class="services">
-    <h2>Our Location</h2>
-    <iframe 
-        src="https://www.google.com/maps?q=Udupi&output=embed"
-        width="100%" 
-        height="300" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
-    </iframe>
-</div>
- 
-<!-- WHY CHOOSE US -->
-<div class="services">
-    <h2>Why Choose Us?</h2>
-    <p>✔ 24/7 Emergency Service</p>
-    <p>✔ ICU Ventilator Ambulance</p>
-    <p>✔ Experienced Doctor & Technician</p>
-    <p>✔ Funeral Undertakers</p>
-    <p>✔ Fast Response in Udupi, Kaup, Manipal, Mangalore, Brahmavara, Kundapura, Hiriyadka, Karkala</p>
-</div>
-
-<!-- FOOTER -->
-<footer>
-    © 2026 Sanjeevini Ambulance Service. All Rights Reserved.
-</footer>
+    </footer>
 
 </body>
+
 </html>
